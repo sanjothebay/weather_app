@@ -1,23 +1,41 @@
+
+
 .jumbotron {
     text-align: center;
-    background-color: black;
-    color: whitesmoke;
     border-radius: 0;
-    border-bottom: 10px solid whitesmoke;
+    border: solid black 10px;
+    padding: 5%;
   }
 
-  .card{
-      margin-right: 2%;
-      margin-top: -5%;
-      padding-right: 38%;
-      display: flex;
-      float: Right;
-
+  .display {
       
-      border: solid black 5px;
   }
 
-  .button{
-      margin-top: 7%;
-      margin-left: 1%;
+  #WeatherDisplay{
+     margin-top: -30%;
+     background-color: black;
+     color: whitesmoke;  
+
   }
+
+  #diplayRow{
+      margin-left: 5%;
+    
+  }
+  .card{
+      padding-top: 30%;
+      
+  }
+
+
+  footer{
+    text-align: center;
+    color: whitesmoke;
+}
+ footer p {
+     background-color: rgb(78, 76, 76);
+     padding: 2%;
+    
+     margin-top: 15%;
+     border-top: solid teal 1rem;
+}
