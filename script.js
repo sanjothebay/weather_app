@@ -73,50 +73,49 @@ function searchWeather(usersInput) {
 
 
 
-//         function searchWeather(usersInput) {
+        function fiveDayWearthe(usersInput) {
     
     
-//         //let usersInput = "";
-//         APIKey = "298ac576969a1ac55b166266aed2262a";
-//         var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + usersInput + "&appid=" + APIKey;
+        //let usersInput = "";
+        APIKey = "298ac576969a1ac55b166266aed2262a";
+        var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + usersInput + "&appid=" + APIKey;
         
-//     // Here we run our AJAX call to the OpenWeatherMap API
-//        $.ajax({
-//         url: queryURLFiveDay,
-//         method: "GET"
-//        })
-//         // We store all of the retrieved data inside of an object called "response"
-//         .then(function (response) {
+    // Here we run our AJAX call to the OpenWeatherMap API
+       $.ajax({
+        url: queryURLFiveDay,
+        method: "GET"
+       })
+        // We store all of the retrieved data inside of an object called "response"
+        .then(function (response) {
 
-//             // Log the queryURLFiveDay
-//             console.log(queryURLFiveDay);
+            // Log the queryURLFiveDay
+            console.log(queryURLFiveDay);
 
-//             // Log the resulting object
-//             console.log(response);
+            // Log the resulting object
+            console.log(response);
 
-//             // Transfer content to HTML
-//             $(".1stDaycity").html("<h1>" + response.name + " Weather Details</h1>");
-//             $(".1stDaywind").text("Wind Speed: " + response.list.[wind.speed);
-//             $(".1stDayhumidity").text("Humidity: " + response.main.humidity);
+            // Transfer content to HTML
+            $(".1stDaywind").text("Date: " + response.list.dt_txt);
+            $(".1stDayhumidity").text("Humidity: " + response.list.main.humidity);
 
-//             // Convert the temp to fahrenheit
-//             let tempF = (response.main.temp - 273.15) * 1.80 + 32;
+            // Convert the temp to fahrenheit
+            let tempF = (response.main.temp - 273.15) * 1.80 + 32;
 
-//             // add temp content to html
-//             $(".1stDaytemp").text("Temperature (K) " + response.main.temp);
-//             $(".1stDaytempF").text("Temperature (F) " + tempF.toFixed(2));
+            // add temp content to html
+            $("").text("Temperature (K) " + response.main.temp);
+            $(".1stDaytempF").text("Temperature (F) " + tempF.toFixed(2));
 
-//             // Log the data in the console as well
-//             console.log("Wind Speed: " + response.wind.speed);
-//             console.log("Humidity: " + response.main.humidity);
-//             console.log("Temperature (F): " + tempF);
+            // Log the data in the console as well
+            console.log("Date: " + response.list.dt_txt);
+            console.log("Humidity: " + response.list.main.humidity);
+            console.log("Temperature (F): " + tempF);
 
-//             let iconLink = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
-//             let imgTag = $("<img>")
-//             imgTag.attr("src", iconLink);
-//             $(".icon").html(imgTag)
-//         });
-// }
+            let iconLink = "http://openweathermap.org/img/wn/" + response.list.weather.icon + "@2x.png";
+            let imgTag = $("<img>")
+            imgTag.attr("src", iconLink);
+            $(".1stDayicon").html(imgTag)
+        });
+}
 
 
 
