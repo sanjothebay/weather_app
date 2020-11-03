@@ -3,11 +3,16 @@
     border-radius: 0;
     border: solid black 10px;
     padding: 5%;
+    background-color: rebeccapurple;
+    color: whitesmoke;
   }
 
   #fiveDayFullPanelcomplete{
       
       float: right;
+  }
+  header{
+      
   }
 
 

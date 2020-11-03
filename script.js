@@ -60,13 +60,25 @@ function searchWeather(usersInput) {
 
         fiveDayWearthe(weatherInput);
 
-        console.log(weatherInput)
-       });
+        console.log(weatherInput);
 
 
-      
+
+        
+        
+        
+    });
+    
+    
+        localStorage.setItem(usersInput,usersInput);
+ 
+       let localStorageusersInput = localStorage.getItem(usersInput);
 
 
+    var listCreationFrominput = $("<p>").text(localStorageusersInput);
+    listCreationFrominput.append(".createdListInput").val();
+    
+    console.log(listCreationFrominput);
 
 
 
@@ -96,19 +108,19 @@ function searchWeather(usersInput) {
 
             // Transfer content to HTML
             $(".1stDayDay").text("Date: " + response.list[3].dt_txt);
-            $(".1stDayhumidity").text("Humidity: " + response.list[3].main.humidity);
+            $(".1stDayhumidity").text("Humidity: " + response.list[3].main.humidity + "%");
 
             $(".2ndDayDate").text("Date: " + response.list[11].dt_txt);
-            $(".2ndDayhumidity").text("Humidity: " + response.list[11].main.humidity);
+            $(".2ndDayhumidity").text("Humidity: " + response.list[11].main.humidity + "%");
 
             $(".3rdDayDate").text("Date: " + response.list[19].dt_txt);
-            $(".3rdDayhumidity").text("Humidity: " + response.list[19].main.humidity);
+            $(".3rdDayhumidity").text("Humidity: " + response.list[19].main.humidity + "%");
 
             $(".4thDayDate").text("Date: " + response.list[27].dt_txt);
-            $(".4thDayhumidity").text("Humidity: " + response.list[27].main.humidity);
+            $(".4thDayhumidity").text("Humidity: " + response.list[27].main.humidity + "%");
             
             $(".5thDayDate").text("Date: " + response.list[35].dt_txt);
-            $(".5thDayhumidity").text("Humidity: " + response.list[35].main.humidity);
+            $(".5thDayhumidity").text("Humidity: " + response.list[35].main.humidity + "%");
 
             // Convert the temp to fahrenheit
             let dayOnetempF = (response.list[3].main.temp - 273.15) * 1.80 + 32;
