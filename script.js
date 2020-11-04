@@ -62,9 +62,9 @@ function searchWeather(usersInput) {
         
         
         
-        localStorage.setItem(usersInput,weatherInput);
+        localStorage.setItem("keyValueUserInput",weatherInput);
         
-        let localStorageusersInput = localStorage.getItem(usersInput);
+        let localStorageusersInput = localStorage.getItem("keyValueUserInput", usersInput);
         
         
         var listCreationFrominput = $("<h4>").text(localStorageusersInput);
@@ -73,8 +73,11 @@ function searchWeather(usersInput) {
         
     });
     // listCreationFrominput.append(".createdListInput").val();
+    var text = localStorage.getItem($(this).attr("createdListInput"))
+    $(this).children("li").val(text)
     
    // console.log(listCreationFrominput);
+
 
 
 
