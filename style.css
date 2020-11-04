@@ -1,18 +1,23 @@
 .jumbotron {
     text-align: center;
     border-radius: 0;
-    border: solid black 10px;
     padding: 5%;
-    background-color: rebeccapurple;
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/anim2.gif");
     color: whitesmoke;
   }
 
   #fiveDayFullPanelcomplete{
       
       float: right;
+      padding-top: 5%;
   }
-  header{
-      
+  .mainrow{
+      padding-left: 5%;
+  }
+  
+  .cardDisplay{
+      margin-left: 5%;
+    
   }
 
 

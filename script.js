@@ -1,5 +1,3 @@
-// Here we are building the URL we need to query the database
-
 let APIKey = "298ac576969a1ac55b166266aed2262a";
 let usersInput ="";
 let weatherInput;
@@ -8,7 +6,7 @@ function searchWeather(usersInput) {
     
     
         //let usersInput = "";
-        APIKey = "298ac576969a1ac55b166266aed2262a";
+        
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + usersInput + "&appid=" + APIKey;
         
     // Here we run our AJAX call to the OpenWeatherMap API
@@ -60,25 +58,23 @@ function searchWeather(usersInput) {
 
         fiveDayWearthe(weatherInput);
 
-        console.log(weatherInput);
-
-
-
+        console.log(weatherInput);        
         
         
+        
+        localStorage.setItem(usersInput,weatherInput);
+        
+        let localStorageusersInput = localStorage.getItem(usersInput);
+        
+        
+        var listCreationFrominput = $("<h4>").text(localStorageusersInput);
+        var userInputinValue = $('#submit').val();
+        $(".createdListInput").append(listCreationFrominput);
         
     });
+    // listCreationFrominput.append(".createdListInput").val();
     
-    
-        localStorage.setItem(usersInput,usersInput);
- 
-       let localStorageusersInput = localStorage.getItem(usersInput);
-
-
-    var listCreationFrominput = $("<p>").text(localStorageusersInput);
-    listCreationFrominput.append(".createdListInput").val();
-    
-    console.log(listCreationFrominput);
+   // console.log(listCreationFrominput);
 
 
 
@@ -87,9 +83,8 @@ function searchWeather(usersInput) {
 
         function fiveDayWearthe(usersInput) {
     
-    
         //let usersInput = "";
-        APIKey = "298ac576969a1ac55b166266aed2262a";
+        
         var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + usersInput + "&appid=" + APIKey;
         
     // Here we run our AJAX call to the OpenWeatherMap API

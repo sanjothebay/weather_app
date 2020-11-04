@@ -3,41 +3,42 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="jumbotron jumbotron-fluid">
-                <h1 class="display-4">Weather Daskboard</h1>
-            </div>
-        </div>
-    </header>
+
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-2">Weather Daskboard</h1>
+    </div>
     <main>
 
 
-        <div class="row">
+        <div class="row mainrow">
             <div class="col-md-3">
-                <div class="button">
-                    <input class="form inputValue" type="text search" placeholder="Search" aria-label="Search">
-                    <button class="button btn-outline-success" value="submit" type="submit">Search</button>
-                    <ul>
-                        <ol class="createdListInput"></ol>
-                        <ol></ol>
-                        <ol></ol>
-                        <ol></ol>
-                        <ol></ol>
-                        <ol></ol>
+                <div class="card" style="width: 20rem;">
+                    <div class="card-header">
+                        <input class="form inputValue" type="text search" placeholder="Search" aria-label="Search">
+                        <button class="button card-header" value="submit" type="submit">Search</button>
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item createdListInput"></li>
+                        <li class="list-group-item"></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+
+
+            <div class="col-md-8">
                 <div class="cardDisplay">
                     <div class="card">
-                        <h1 id="WeatherDisplay">Weather Display</h1>
+                        <div class="card-header">
+                            <h1 id="WeatherDisplay">Weather Display</h1>
+                        </div>
                         <!-- Retrieved data will be dumped here -->
                         <div class="icon"></div>
                         <div class="city">City: </div>
@@ -53,12 +54,15 @@
 
 
 
+
         <div class="row" id="fiveDayFullPanelcomplete">
 
             <div id="">
                 <div class="col-md-12">
                     <div class="card">
-                        <h3 class="panel-title"> Weather Display </h3>
+                        <div class="card-header">
+                            <h3 class="panel-title"> Weather Display </h3>
+                        </div>
                         <div class="1stDayDay">Date: </div>
                         <div class="1stDayicon"></div>
                         <div class="1stDaytempF">Temperature Fahrenheit: </div>
@@ -70,7 +74,9 @@
             <div id="">
                 <div class="col-md-12">
                     <div class="card">
-                        <h3 class="panel-title"> Weather Display </h3>
+                        <div class="card-header">
+                            <h3 class="panel-title"> Weather Display </h3>
+                        </div>
                         <div class="2ndDayDate">Date: </div>
                         <div class="2ndDayicon"></div>
                         <div class="2ndDaytempF">Temperature Fahrenheit: </div>
@@ -82,7 +88,9 @@
             <div id="">
                 <div class="col-md-12">
                     <div class="card">
-                        <h3 class="panel-title"> Weather Display </h3>
+                        <div class="card-header">
+                            <h3 class="panel-title"> Weather Display </h3>
+                        </div>
                         <div class="3rdDayDate">Date: </div>
                         <div class="3rdDayicon"></div>
                         <div class="3rdDaytempF">Temperature Fahrenheit: </div>
@@ -95,7 +103,9 @@
             <div id="">
                 <div class="col-md-12">
                     <div class="card">
-                        <h3 class="panel-title"> Weather Display </h3>
+                        <div class="card-header">
+                            <h3 class="panel-title"> Weather Display </h3>
+                        </div>
                         <div class="4thDayDate">Date: </div>
                         <div class="4thDayicon"></div>
                         <div class="4thDaytempF">Temperature Fahrenheit: </div>
@@ -108,7 +118,9 @@
             <div id="">
                 <div class="col-md-12">
                     <div class="card">
-                        <h3 class="panel-title"> Weather Display </h3>
+                        <div class="card-header">
+                            <h3 class="panel-title"> Weather Display </h3>
+                        </div>
                         <div class="5thDayDate">Date: </div>
                         <div class="5thDayicon"></div>
                         <div class="5thDaytempF">Temperature Fahrenheit: </div>
@@ -130,8 +142,6 @@
     </footer>
 
 </body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./script.js"> </script>
 
