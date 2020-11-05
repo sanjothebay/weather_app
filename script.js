@@ -64,16 +64,17 @@ function searchWeather(usersInput) {
         
         localStorage.setItem("keyValueUserInput",weatherInput);
         
-        let localStorageusersInput = localStorage.getItem("keyValueUserInput");
+        localStorageusersInput = localStorage.getItem("keyValueUserInput");
         
         
         var listCreationFrominput = $("<h4>").text(localStorageusersInput);
    
         $(".createdListInput").append(listCreationFrominput);
+        $(".createdListInput").append(localStorageusersInput);
         
     });
 
-    
+    let localStorageusersInput;
  //localStorage.setItem("keyValueUserInput",weatherInput);
         
 //let localStorageusersInput = localStorage.getItem("keyValueUserInput");
