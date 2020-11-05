@@ -27,11 +27,8 @@
   footer{
     text-align: center;
     color: whitesmoke;
-}
- footer p {
-     background-color: rgb(78, 76, 76);
-     padding: 2%;
-    
-     margin-top: 25%;
-     border-top: solid teal 1rem;
+    margin-top: 17%;
+    background-color: rgb(78, 76, 76);
+    border-top: solid teal 1rem;
+    padding: 1%;
 }
