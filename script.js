@@ -1,10 +1,19 @@
 let APIKey = "298ac576969a1ac55b166266aed2262a";
-let usersInput ="";
-let weatherInput="";
+let usersInput ;
+let weatherInput ;
+
+
 
 function searchWeather(usersInput) {
     
+    localStorage.setItem("historyCities",weatherInput);
+        
+    localStorageusersInput = localStorage.getItem("historyCities");
     
+    
+    var listCreationFrominput = $("<h4>").text(localStorageusersInput);
+
+    $(".createdListInput").append(listCreationFrominput);
         //let usersInput = "";
         
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + usersInput + "&appid=" + APIKey;
@@ -62,14 +71,16 @@ function searchWeather(usersInput) {
         
         
         
+
         localStorage.setItem("historyCities",weatherInput);
         
         localStorageusersInput = localStorage.getItem("historyCities");
         
         
         var listCreationFrominput = $("<h4>").text(localStorageusersInput);
-   
-        $(".createdListInput").append(listCreationFrominput);
+    
+       
+       
        // $(".createdListInput").append(localStorageusersInput);
 
         //let history  = [];
