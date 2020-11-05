@@ -3,17 +3,16 @@ let usersInput ;
 let weatherInput ;
 
 
+let localStorageusersInput = localStorage.getItem("historyCities");
+ 
+let listCreationFrominput = $("<h4>").text(localStorageusersInput);
+
+$(".createdListInput").append(listCreationFrominput);
+
 
 function searchWeather(usersInput) {
     
-    localStorage.setItem("historyCities",weatherInput);
-        
-    localStorageusersInput = localStorage.getItem("historyCities");
-    
-    
-    var listCreationFrominput = $("<h4>").text(localStorageusersInput);
 
-    $(".createdListInput").append(listCreationFrominput);
         //let usersInput = "";
         
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + usersInput + "&appid=" + APIKey;
@@ -93,7 +92,7 @@ function searchWeather(usersInput) {
        // history = parseInt($(this).append(".createdListInput"))
 
 
-    let localStorageusersInput;
+    
 
  //localStorage.setItem("keyValueUserInput",weatherInput);
         
