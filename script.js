@@ -64,19 +64,28 @@ function searchWeather(usersInput) {
         
         localStorage.setItem("keyValueUserInput",weatherInput);
         
-        let localStorageusersInput = localStorage.getItem("keyValueUserInput", usersInput);
+        let localStorageusersInput = localStorage.getItem("keyValueUserInput");
         
         
         var listCreationFrominput = $("<h4>").text(localStorageusersInput);
-        var userInputinValue = $('#submit').val();
+   
         $(".createdListInput").append(listCreationFrominput);
         
     });
-    // listCreationFrominput.append(".createdListInput").val();
-    var text = localStorage.getItem($(this).attr("createdListInput"))
-    $(this).children("li").val(text)
+
     
-   // console.log(listCreationFrominput);
+ //localStorage.setItem("keyValueUserInput",weatherInput);
+        
+//let localStorageusersInput = localStorage.getItem("keyValueUserInput");
+//$(".createdListInput").append(weatherInput);
+
+
+
+
+
+ 
+    
+
 
 
 
@@ -105,31 +114,31 @@ function searchWeather(usersInput) {
             console.log(response);
 
             // Transfer content to HTML
-            $(".1stDayDay").text("Date: " + response.list[3].dt_txt);
-            $(".1stDayhumidity").text("Humidity: " + response.list[3].main.humidity + "%");
+            $(".1stDayDay").text("Date: " + response.list[4].dt_txt);
+            $(".1stDayhumidity").text("Humidity: " + response.list[4].main.humidity + "%");
 
-            $(".2ndDayDate").text("Date: " + response.list[11].dt_txt);
-            $(".2ndDayhumidity").text("Humidity: " + response.list[11].main.humidity + "%");
+            $(".2ndDayDate").text("Date: " + response.list[12].dt_txt);
+            $(".2ndDayhumidity").text("Humidity: " + response.list[12].main.humidity + "%");
 
-            $(".3rdDayDate").text("Date: " + response.list[19].dt_txt);
-            $(".3rdDayhumidity").text("Humidity: " + response.list[19].main.humidity + "%");
+            $(".3rdDayDate").text("Date: " + response.list[20].dt_txt);
+            $(".3rdDayhumidity").text("Humidity: " + response.list[20].main.humidity + "%");
 
-            $(".4thDayDate").text("Date: " + response.list[27].dt_txt);
-            $(".4thDayhumidity").text("Humidity: " + response.list[27].main.humidity + "%");
+            $(".4thDayDate").text("Date: " + response.list[28].dt_txt);
+            $(".4thDayhumidity").text("Humidity: " + response.list[28].main.humidity + "%");
             
-            $(".5thDayDate").text("Date: " + response.list[35].dt_txt);
-            $(".5thDayhumidity").text("Humidity: " + response.list[35].main.humidity + "%");
+            $(".5thDayDate").text("Date: " + response.list[36].dt_txt);
+            $(".5thDayhumidity").text("Humidity: " + response.list[36].main.humidity + "%");
 
             // Convert the temp to fahrenheit
-            let dayOnetempF = (response.list[3].main.temp - 273.15) * 1.80 + 32;
+            let dayOnetempF = (response.list[4].main.temp - 273.15) * 1.80 + 32;
 
-            let dayTwotempF = (response.list[11].main.temp - 273.15) * 1.80 + 32;
+            let dayTwotempF = (response.list[12].main.temp - 273.15) * 1.80 + 32;
 
-            let dayThreetempF = (response.list[19].main.temp - 273.15) * 1.80 + 32;
+            let dayThreetempF = (response.list[20].main.temp - 273.15) * 1.80 + 32;
 
-            let dayFourtempF = (response.list[27].main.temp - 273.15) * 1.80 + 32;
+            let dayFourtempF = (response.list[28].main.temp - 273.15) * 1.80 + 32;
 
-            let dayFivetempF = (response.list[35].main.temp - 273.15) * 1.80 + 32;
+            let dayFivetempF = (response.list[36].main.temp - 273.15) * 1.80 + 32;
 
             // add temp content to html
             //$("").text("Temperature (K) " + response.main.temp);
@@ -148,27 +157,27 @@ function searchWeather(usersInput) {
             console.log("Humidity: " + response.list[0].main.humidity);
            // console.log("Temperature (F): " + tempF);
 
-            let iconLink = "http://openweathermap.org/img/wn/" + response.list[3].weather[0].icon + "@2x.png";
+            let iconLink = "http://openweathermap.org/img/wn/" + response.list[4].weather[0].icon + "@2x.png";
             let imgTag = $("<img>")
             imgTag.attr("src", iconLink);
             $(".1stDayicon").html(imgTag)
 
-            let dayoneiconLink = "http://openweathermap.org/img/wn/" + response.list[11].weather[0].icon + "@2x.png";
+            let dayoneiconLink = "http://openweathermap.org/img/wn/" + response.list[12].weather[0].icon + "@2x.png";
             let daytwoimgTag = $("<img>")
             daytwoimgTag.attr("src", dayoneiconLink);
             $(".2ndDayicon").html(daytwoimgTag)
 
-            let daytwoiconLink = "http://openweathermap.org/img/wn/" + response.list[19].weather[0].icon + "@2x.png";
+            let daytwoiconLink = "http://openweathermap.org/img/wn/" + response.list[20].weather[0].icon + "@2x.png";
             let daythreeimgTag = $("<img>")
             daythreeimgTag.attr("src", daytwoiconLink);
             $(".3rdDayicon").html(daythreeimgTag)
 
-            let daythreeiconLink = "http://openweathermap.org/img/wn/" + response.list[27].weather[0].icon + "@2x.png";
+            let daythreeiconLink = "http://openweathermap.org/img/wn/" + response.list[28].weather[0].icon + "@2x.png";
             let dayfourimgTag = $("<img>")
             dayfourimgTag.attr("src", daythreeiconLink);
             $(".4thDayicon").html(dayfourimgTag)
 
-            let dayfouriconLink = "http://openweathermap.org/img/wn/" + response.list[35].weather[0].icon + "@2x.png";
+            let dayfouriconLink = "http://openweathermap.org/img/wn/" + response.list[36].weather[0].icon + "@2x.png";
             let dayfiveimgTag = $("<img>")
             dayfiveimgTag.attr("src", dayfouriconLink);
             $(".5thDayicon").html(dayfiveimgTag)
