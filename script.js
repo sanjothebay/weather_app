@@ -1,6 +1,6 @@
 let APIKey = "298ac576969a1ac55b166266aed2262a";
 let usersInput ="";
-let weatherInput;
+let weatherInput="";
 
 function searchWeather(usersInput) {
     
@@ -62,34 +62,32 @@ function searchWeather(usersInput) {
         
         
         
-        localStorage.setItem("keyValueUserInput",weatherInput);
+        localStorage.setItem("historyCities",weatherInput);
         
-        localStorageusersInput = localStorage.getItem("keyValueUserInput");
+        localStorageusersInput = localStorage.getItem("historyCities");
         
         
         var listCreationFrominput = $("<h4>").text(localStorageusersInput);
    
         $(".createdListInput").append(listCreationFrominput);
-        $(".createdListInput").append(localStorageusersInput);
+       // $(".createdListInput").append(localStorageusersInput);
+
+        //let history  = [];
+
+
         
     });
 
+        
+       // history = parseInt($(this).append(".createdListInput"))
+
+
     let localStorageusersInput;
+
  //localStorage.setItem("keyValueUserInput",weatherInput);
         
 //let localStorageusersInput = localStorage.getItem("keyValueUserInput");
-//$(".createdListInput").append(weatherInput);
-
-
-
-
-
- 
-    
-
-
-
-
+$(".createdListInput").append(weatherInput);
 
 
 
