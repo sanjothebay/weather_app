@@ -2,12 +2,17 @@ let APIKey = "298ac576969a1ac55b166266aed2262a";
 let usersInput ;
 let weatherInput ;
 
-
-let localStorageusersInput = localStorage.getItem("historyCities");
+let history  = JSON.parse(localStorage.getItem("historyCities"));
+console.log(history)
+for(var city of history){
+    let localStorageusersInput = city
  
-let listCreationFrominput = $("<h4>").text(localStorageusersInput);
+listCreationFrominput = $("<button>").text(localStorageusersInput);
 
 $(".createdListInput").append(listCreationFrominput);
+
+}
+
 
 
 function searchWeather(usersInput) {
@@ -69,14 +74,14 @@ function searchWeather(usersInput) {
         console.log(weatherInput);        
         
         
-        
+        history.push(weatherInput)
 
-        localStorage.setItem("historyCities",weatherInput);
+        localStorage.setItem("historyCities",JSON.stringify(history));
         
-        localStorageusersInput = localStorage.getItem("historyCities");
+        localStorageusersInput = weatherInput;
         
         
-        var listCreationFrominput = $("<h4>").text(localStorageusersInput);
+        listCreationFrominput = $("<h4>").text(localStorageusersInput);
     
        
        
