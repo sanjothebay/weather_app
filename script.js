@@ -4,12 +4,25 @@ let weatherInput ;
 
 let history  = JSON.parse(localStorage.getItem("historyCities"));
 console.log(history)
-for(var city of history){
-    let localStorageusersInput = city
- 
-listCreationFrominput = $("<button>").text(localStorageusersInput);
 
-$(".createdListInput").append(listCreationFrominput);
+
+if (Array.isArray (history)  === true) {
+    
+    
+    for(var city of history){
+        let localStorageusersInput = city
+        
+        listCreationFrominput = $("<ol>").text(localStorageusersInput);
+        
+        $(".createdListInput").append(listCreationFrominput);
+        
+    }
+    
+    
+}
+
+else{
+history= [];
 
 }
 
@@ -77,12 +90,13 @@ function searchWeather(usersInput) {
         history.push(weatherInput)
 
         localStorage.setItem("historyCities",JSON.stringify(history));
+        console.log(history)
         
         localStorageusersInput = weatherInput;
         
         
-        listCreationFrominput = $("<h4>").text(localStorageusersInput);
-    
+       
+        $(".createdListInput").text(weatherInput);
        
        
        // $(".createdListInput").append(localStorageusersInput);
