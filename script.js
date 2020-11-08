@@ -7,9 +7,8 @@ let history = JSON.parse(localStorage.getItem("historyCities"));
 
 
 $(".createdListInput").on("click", "li", function() {
-    let litstcreatedelement = $(this).text();
+    let litstcreatedelement = $(this).text()
     searchWeather(litstcreatedelement);
-     fiveDayWearthe(weatherInput);
     console.log(litstcreatedelement);
 
 });
