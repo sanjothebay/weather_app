@@ -7,8 +7,9 @@ let history = JSON.parse(localStorage.getItem("historyCities"));
 
 
 $(".createdListInput").on("click", "li", function() {
-    let litstcreatedelement = $(this).text()
+    let litstcreatedelement = $(this).text();
     searchWeather(litstcreatedelement);
+     fiveDayWearthe(weatherInput);
     console.log(litstcreatedelement);
 
 });
@@ -118,9 +119,9 @@ function fiveDayWearthe(usersInput) {
            // Log the queryURLFiveDay
            // Log the resulting object
            // Transfer content to HTML
-           $(".1stDayDay").text("Date: " + response.list[4].dt_txt);
+           $(".1stDayDate").text("Date: " + response.list[4].dt_txt);
 
-$(".1stDayhumidity").text("Humidity: " + response.list[4].main.humidity + "%");
+           $(".1stDayhumidity").text("Humidity: " + response.list[4].main.humidity + "%");
            $(".2ndDayDate").text("Date: " + response.list[12].dt_txt);
            $(".2ndDayhumidity").text("Humidity: " + response.list[12].main.humidity + "%");
            $(".3rdDayDate").text("Date: " + response.list[20].dt_txt);
