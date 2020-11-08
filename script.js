@@ -4,16 +4,29 @@ let weatherInput;
 let latitude ;
 let longitude;
 let history = JSON.parse(localStorage.getItem("historyCities"));
+
+
+$(".createdListInput").on("click", "li", function() {
+    let litstcreatedelement = $(this).text()
+    searchWeather(litstcreatedelement);
+    console.log(litstcreatedelement);
+
+});
+
+
 function historyDisplay() {
  
    console.log("history : ", history)
    if (Array.isArray(history) === true) {
        $(".createdListInput").empty();
+       listCreationFrominput = "";
+       localStorageusersInput = "";
        for (var city of history) {
            console.log("city in for loop : ", city);
            let localStorageusersInput = city
-           listCreationFrominput = $("<ol>").text(localStorageusersInput);
+           listCreationFrominput = $("<li>").text(localStorageusersInput);
            $(".createdListInput").append(listCreationFrominput);
+           
        }
    }
    else {
@@ -22,7 +35,6 @@ function historyDisplay() {
 }
 historyDisplay();
 function searchWeather(usersInput) {
-    
    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + usersInput + "&appid=" + APIKey;
    // Here we run our AJAX call to the OpenWeatherMap API
    $.ajax({
@@ -84,11 +96,15 @@ $("button").on("click", (event) => {
    console.log("history after pushing: ", history)
    localStorage.setItem("historyCities", JSON.stringify(history));
    historyDisplay();
-   
+   $(".inputValue").empty()
 
+   
+  
 });
 
-$(".createdListInput").append(weatherInput);
+
+
+
 function fiveDayWearthe(usersInput) {
    var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + usersInput + "&appid=" + APIKey;
    // Here we run our AJAX call to the OpenWeatherMap API
