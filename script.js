@@ -76,7 +76,8 @@ function searchWeather(usersInput) {
                // We store all of the retrieved data inside of an object called "response"
                .then(function (response) {
                
-                   $(".UV").text("UV Index: " + response.value + ).css( "background-color" );
+                  // $(".UV").text("UV Index: " + response.value);
+                  $(".UV").css("background-color", "red").text(response.value);
 
                    
                });
