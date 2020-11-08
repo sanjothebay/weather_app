@@ -39,14 +39,29 @@ The following image demonstrates the application functionality:
 
 ![image](https://user-images.githubusercontent.com/67298961/98206417-78604180-1eff-11eb-9208-9184d08a2faf.png)
 
+**** I pulled the work from the Tech Monterrey Gitlab and I then created my own repository for the project *****
+
 
 ![image](https://user-images.githubusercontent.com/67298961/98205677-2834af80-1efe-11eb-9a78-9a1dc51c6b97.png)
 
 ![image](https://user-images.githubusercontent.com/67298961/98206261-39ca8700-1eff-11eb-9f35-dbe042ffc237.png)
 
+I started by going to the weather API and getting the API that had the current weather as well as the 5-day forecast. 
+I then built a placeholder for where everything would be placed. For visual aspects. 
+
 ![image](https://user-images.githubusercontent.com/67298961/98206324-54046500-1eff-11eb-915c-fff271b9d9b5.png)
 
+I then search for how to convert the temperature to Fahrenheit.
+let tempF = (response.main.temp - 273.15) * 1.80 + 32;
+With my click function, I was able to consol.log the weather API and see that I need the icon, wind, temp, and humidity. 
+When I was able to append the first information from the object I had no issue with the rest. 
+I had fun looking up through the object and see what I can add. 
+
 ![image](https://user-images.githubusercontent.com/67298961/98206087-eeb07400-1efe-11eb-9396-a834002fed8c.png)
+I was able to add the localStorage and append it as well, But I still having issues understanding how to ave the text stay after a refresh.
+I was able to get the user input to append to the bottom of the serach.this would he use for history in case the user wants to see what he has searched for 
 
 ![image](https://user-images.githubusercontent.com/67298961/98206157-10116000-1eff-11eb-9e48-d99f7996f0e4.png)
+
+Over all this was a great Homework that i enjoyed doing i learned alot form the api calls. 
 
