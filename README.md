@@ -41,6 +41,7 @@ The following image demonstrates the application functionality:
 
 **** I pulled the work from the Tech Monterrey Gitlab and I then created my own repository for the project *****
 
+**** App Has Working Gif ****
 
 ![image](https://user-images.githubusercontent.com/67298961/98205677-2834af80-1efe-11eb-9a78-9a1dc51c6b97.png)
 
