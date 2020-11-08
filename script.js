@@ -1,6 +1,8 @@
 let APIKey = "298ac576969a1ac55b166266aed2262a";
 let usersInput;
 let weatherInput;
+let latitude ;
+let longitude;
 let history = JSON.parse(localStorage.getItem("historyCities"));
 function historyDisplay() {
  
@@ -30,6 +32,7 @@ function searchWeather(usersInput) {
        // We store all of the retrieved data inside of an object called "response"
        .then(function (response) {
            // Log the queryURL
+           console.log(response)
            // Log the resulting object
            // Transfer content to HTML
            $(".city").html("<h3>" + response.name + " Weather Details</h3>");
@@ -44,7 +47,29 @@ function searchWeather(usersInput) {
            let iconLink = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
            let imgTag = $("<img>")
            imgTag.attr("src", iconLink);
-           $(".icon").html(imgTag)
+           $(".icon").html(imgTag);
+
+
+           latitude = response.coord.lat;
+           longitude = response.coord.lon;
+           console.log(latitude);
+           console.log(longitude);
+
+           var queryURL1 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
+           // Here we run our AJAX call to the OpenWeatherMap API
+           $.ajax({
+             url: queryURL1,
+             method: "GET"
+           })
+               // We store all of the retrieved data inside of an object called "response"
+               .then(function (response) {
+               
+                   $(".UV").text("UV Index: " + response.value);
+
+                   
+               });
+
+
        });
 }
 $("button").on("click", (event) => {
@@ -59,6 +84,7 @@ $("button").on("click", (event) => {
    console.log("history after pushing: ", history)
    localStorage.setItem("historyCities", JSON.stringify(history));
    historyDisplay();
+   
 
 });
 
@@ -121,3 +147,5 @@ $(".1stDayhumidity").text("Humidity: " + response.list[4].main.humidity + "%");
            $(".5thDayicon").html(dayfiveimgTag)
        });
 }
+
+
