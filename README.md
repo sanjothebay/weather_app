@@ -1,8 +1,8 @@
 ﻿# weather_app_tech_monterrey_hw
  
- https://sanjothebay.github.io/weather_app_tech_monterrey_hw/
+ https://sanjothebay.github.io/weather_app/
 
-https://github.com/sanjothebay/weather_app_tech_monterrey_hw
+https://github.com/sanjothebay/weather_app
 
 
 # 06 Server-Side APIs: Weather Dashboard
